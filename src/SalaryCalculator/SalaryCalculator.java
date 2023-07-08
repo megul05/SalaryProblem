@@ -3,74 +3,88 @@ import java.util.Scanner;
 
 public class SalaryCalculator {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int Sun = sc.nextInt();
-        int Mon = sc.nextInt();
-        int Tue = sc.nextInt();
-        int Wed = sc.nextInt();
-        int Thu = sc.nextInt();
-        int Fri = sc.nextInt();
-        int Sat = sc.nextInt();
-        int totSalary, bonus, weeklyBonus, extraWeeklySalary=0;
-        int salaryMon, salaryTue, salaryWed, salaryThu, salaryFri, extraHour=0;
+        Scanner scan= new Scanner(System.in);
+        int Sunday = scan.nextInt();
+        int Monday = scan.nextInt();
+        int Tuesday = scan.nextInt();
+        int Wednesday = scan.nextInt();
+        int Thursday = scan.nextInt();
+        int Friday = scan.nextInt();
+        int Saturday = scan.nextInt();
+        int totSalary, bonus, weeklyBonus, extraWeekSalary=0;
+        int salaryMonday, salaryTuesday, salaryWednesday, salaryThursday, salaryFriday, extraHour=0;
 
 
-        int salarySat= Sat * 125;
-        int salarySun= Sun * 150;
+        int salarySat= Saturday * 125;
+        int salarySun= Sunday * 150;
 
-        if(Mon > 8){
-            extraHour = Mon-8;
-            bonus = extraHour*115;
-            salaryMon = bonus + 800;
-        } else{
-            salaryMon = Mon*100;
+        if(Monday > 8)
+        {
+            extraHour = Monday - 8;
+            bonus = extraHour * 115;
+            salaryMonday = bonus + 800;
+        } 
+        else
+        {
+            salaryMonday = Monday * 100;
         }
 
 
-        if(Tue > 8){
-            extraHour = Tue-8;
-            bonus = extraHour*115;
-            salaryTue = bonus + 800;
-        } else{
-            salaryTue = Tue*100;
+        if(Tuesday > 8)
+        {
+            extraHour = Tuesday - 8;
+            bonus = extraHour * 115;
+            salaryTuesday = bonus + 800;
+        } 
+        else
+        {
+            salaryTuesday = Tuesday * 100;
         }
 
 
-        if(Wed > 8){
-            extraHour = Wed-8;
-            bonus = extraHour*115;
-            salaryWed = bonus + 800;
-        } else{
-            salaryWed = Wed*100;
+        if(Wednesday > 8)
+        {
+            extraHour = Wednesday - 8;
+            bonus = extraHour * 115;
+            salaryWednesday = bonus + 800;
+        } 
+        else
+        {
+            salaryWednesday = Wednesday *100;
         }
 
 
-        if(Thu > 8){
-            extraHour = Thu-8;
-            bonus = extraHour*115;
-            salaryThu = bonus + 800;
-        } else{
-            salaryThu = Thu*100;
+        if(Thursday > 8)
+        {
+            extraHour = Thursday - 8;
+            bonus = extraHour * 115;
+            salaryThursday = bonus + 800;
+        } 
+        else
+        {
+            salaryThursday = Thursday * 100;
         }
 
 
-        if(Fri > 8){
-            extraHour = Fri-8;
-            bonus = extraHour*115;
-            salaryFri = bonus + 800;
-        } else{
-            salaryFri = Fri*100;
+        if(Friday > 8)
+        {
+            extraHour = Friday - 8;
+            bonus = extraHour * 115;
+            salaryFriday = bonus + 800;
+        } 
+        else
+        {
+            salaryFriday = Friday * 100;
         }
 
-        int totalHours = Mon + Tue + Wed + Thu + Fri;
-        if(totalHours > 40){
+        int totalHours = Monday + Tuesday + Wednesday + Thursday + Friday;
+        if(totalHours > 40)
+        {
            weeklyBonus  = totalHours-40;
-           extraWeeklySalary = weeklyBonus * 125;
+           extraWeekSalary = weeklyBonus * 125;
         }
-        totSalary = salaryMon + salaryTue + salaryWed + salaryThu + salaryFri + salarySat + salarySun + extraWeeklySalary;
+        totSalary = salaryMonday + salaryTuesday + salaryWednesday + salaryThursday + salaryFriday + salarySat + salarySun + extraWeekSalary;
         System.out.println(totSalary);
-
-
 
     }
 }
